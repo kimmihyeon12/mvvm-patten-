@@ -13,7 +13,7 @@ struct apiTestApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            MainUiView()
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
     }

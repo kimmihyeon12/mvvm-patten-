@@ -10,9 +10,12 @@
 		8B0EA076298B376800242B23 /* apiTestApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B0EA075298B376800242B23 /* apiTestApp.swift */; };
 		8B0EA078298B376800242B23 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B0EA077298B376800242B23 /* Persistence.swift */; };
 		8B0EA07B298B376800242B23 /* apiTest.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8B0EA079298B376800242B23 /* apiTest.xcdatamodeld */; };
-		8B0EA07D298B376800242B23 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B0EA07C298B376800242B23 /* ContentView.swift */; };
 		8B0EA07F298B376900242B23 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B0EA07E298B376900242B23 /* Assets.xcassets */; };
 		8B0EA083298B376900242B23 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B0EA082298B376900242B23 /* Preview Assets.xcassets */; };
+		8B0EA08E298B3AC300242B23 /* MainUiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B0EA08D298B3AC300242B23 /* MainUiView.swift */; };
+		8B0EA092298B3B9A00242B23 /* CourseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B0EA091298B3B9A00242B23 /* CourseViewModel.swift */; };
+		8B0EA094298B3DAB00242B23 /* Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B0EA093298B3DAB00242B23 /* Course.swift */; };
+		8B0EA097298B51DA00242B23 /* fetchImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B0EA096298B51DA00242B23 /* fetchImage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,10 +23,13 @@
 		8B0EA075298B376800242B23 /* apiTestApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = apiTestApp.swift; sourceTree = "<group>"; };
 		8B0EA077298B376800242B23 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		8B0EA07A298B376800242B23 /* apiTest.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = apiTest.xcdatamodel; sourceTree = "<group>"; };
-		8B0EA07C298B376800242B23 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		8B0EA07E298B376900242B23 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8B0EA080298B376900242B23 /* apiTest.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = apiTest.entitlements; sourceTree = "<group>"; };
 		8B0EA082298B376900242B23 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		8B0EA08D298B3AC300242B23 /* MainUiView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainUiView.swift; sourceTree = "<group>"; };
+		8B0EA091298B3B9A00242B23 /* CourseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseViewModel.swift; sourceTree = "<group>"; };
+		8B0EA093298B3DAB00242B23 /* Course.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Course.swift; sourceTree = "<group>"; };
+		8B0EA096298B51DA00242B23 /* fetchImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fetchImage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,12 +62,14 @@
 		8B0EA074298B376800242B23 /* apiTest */ = {
 			isa = PBXGroup;
 			children = (
+				8B0EA095298B506D00242B23 /* Util */,
+				8B0EA08C298B382200242B23 /* View */,
+				8B0EA08B298B380800242B23 /* VIewModel */,
+				8B0EA08A298B380000242B23 /* Model */,
+				8B0EA089298B37A600242B23 /* CoreData */,
 				8B0EA075298B376800242B23 /* apiTestApp.swift */,
-				8B0EA077298B376800242B23 /* Persistence.swift */,
-				8B0EA07C298B376800242B23 /* ContentView.swift */,
 				8B0EA07E298B376900242B23 /* Assets.xcassets */,
 				8B0EA080298B376900242B23 /* apiTest.entitlements */,
-				8B0EA079298B376800242B23 /* apiTest.xcdatamodeld */,
 				8B0EA081298B376900242B23 /* Preview Content */,
 			);
 			path = apiTest;
@@ -73,6 +81,47 @@
 				8B0EA082298B376900242B23 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		8B0EA089298B37A600242B23 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				8B0EA077298B376800242B23 /* Persistence.swift */,
+				8B0EA079298B376800242B23 /* apiTest.xcdatamodeld */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		8B0EA08A298B380000242B23 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8B0EA093298B3DAB00242B23 /* Course.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		8B0EA08B298B380800242B23 /* VIewModel */ = {
+			isa = PBXGroup;
+			children = (
+				8B0EA091298B3B9A00242B23 /* CourseViewModel.swift */,
+			);
+			path = VIewModel;
+			sourceTree = "<group>";
+		};
+		8B0EA08C298B382200242B23 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8B0EA08D298B3AC300242B23 /* MainUiView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		8B0EA095298B506D00242B23 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				8B0EA096298B51DA00242B23 /* fetchImage.swift */,
+			);
+			path = Util;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -145,9 +194,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8B0EA094298B3DAB00242B23 /* Course.swift in Sources */,
 				8B0EA07B298B376800242B23 /* apiTest.xcdatamodeld in Sources */,
 				8B0EA076298B376800242B23 /* apiTestApp.swift in Sources */,
-				8B0EA07D298B376800242B23 /* ContentView.swift in Sources */,
+				8B0EA092298B3B9A00242B23 /* CourseViewModel.swift in Sources */,
+				8B0EA097298B51DA00242B23 /* fetchImage.swift in Sources */,
+				8B0EA08E298B3AC300242B23 /* MainUiView.swift in Sources */,
 				8B0EA078298B376800242B23 /* Persistence.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
