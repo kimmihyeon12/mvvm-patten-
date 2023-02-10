@@ -9,7 +9,7 @@ import Foundation
 import SwiftUI
 
 func fetchImage(from url: String, completion: @escaping (UIImage?) -> Void) {
-    let imgUrl = URL(string: url)!`;
+    let imgUrl = URL(string: url)!
         URLSession.shared.dataTask(with: imgUrl) { (data, response, error) in
             if let error = error {
                 print("Error fetching image: \(error)")
